@@ -18,21 +18,21 @@ class Extension implements PHPUnitExtension
 {
     public function bootstrap(Configuration $configuration, Facade $facade, ParameterCollection $parameters): void
     {
-        $testSuiteFailures = new TestSuiteStatus();
+        $testSuiteStatus = new TestSuiteStatus();
 
-        $failedSubscriber = new class ($testSuiteFailures) implements FailedSubscriber {
-            public function __construct(public TestSuiteStatus $testSuiteFailures)
+        $failedSubscriber = new class ($testSuiteStatus) implements FailedSubscriber {
+            public function __construct(public TestSuiteStatus $testSuiteStatus)
             {
             }
 
             public function notify(Failed $event): void
             {
-                $this->testSuiteFailures->hasFailed = true;
+                $this->testSuiteStatus->hasFailed = true;
             }
         };
 
         $facade->registerSubscriber($failedSubscriber);
-        $facade->registerSubscriber(new class ($testSuiteFailures) implements FinishedSubscriber {
+        $facade->registerSubscriber(new class ($testSuiteStatus) implements FinishedSubscriber {
             public function __construct(public TestSuiteStatus $testSuiteFailures)
             {
             }
