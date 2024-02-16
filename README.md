@@ -2,6 +2,8 @@
 
 This project is in no way endorsed or associated with PHPUnit. It is just an extension to lightly insult you when your tests fail.
 
+Thanks to [Froggy](https://twitter.com/Froggymakes) for the name idea!
+
 ## Installation
 
 Install via composer:
