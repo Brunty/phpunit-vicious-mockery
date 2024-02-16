@@ -15,7 +15,8 @@ class Insults
         'Test failures for dummies - Author: You.',
         'The code \'Crash Course\' you took wasn\'t meant to be taken so literally.',
         'Back to the drawing board I guess, time to figure out where you went wrong in life.',
-        'Some days you write amazing code. Today is not one of those days',
+        'Some days you write amazing code. Today is not one of those days.',
+        'Did you roll a 1 on your int check when writing that code?',
     ];
 
     public static function randomInsult(): string
