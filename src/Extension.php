@@ -32,6 +32,7 @@ class Extension implements PHPUnitExtension
         };
 
         $facade->registerSubscriber($failedSubscriber);
+
         $facade->registerSubscriber(new class ($testSuiteStatus) implements FinishedSubscriber {
             public function __construct(public TestSuiteStatus $testSuiteFailures)
             {

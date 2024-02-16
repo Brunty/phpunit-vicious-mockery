@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Brunty\PhpunitViciousMockery;
 
@@ -8,6 +10,11 @@ class Insults
         'class YourCode implements Incompetence',
         'Is your code a bad sitcom? Nobody\'s laughing and it\'s full of errors.',
         'Well that was a train wreck in slow motion.',
+        'Error: ID10T.',
+        'Error: PEBKAC.',
+        'Test failures for dummies - Author: You.',
+        'The code \'Crash Course\' you took wasn\'t meant to be taken so literally.',
+        'Back to the drawing board I guess, time to figure out where you went wrong in life.',
     ];
 
     public static function randomInsult(): string
